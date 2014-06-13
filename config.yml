@@ -1,0 +1,11 @@
+500px:
+  key: YOUR_KEY
+  photos_per_page:  20
+
+default:
+  flickr:
+    rss:
+      url:  http://feeds.feedburner.com/LargeFlickrInterestingnessFeedForWallpaper
+  500px:
+    base_url: https://api.500px.com
+
