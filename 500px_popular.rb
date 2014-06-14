@@ -4,9 +4,9 @@ require 'open-uri'
 require 'image_size'
 
 # read config file
-WORKING_DIR = Dir.pwd
-CONFIG_PATH = WORKING_DIR + '/config.yml'
+CONFIG_PATH = './config.yml'
 cfg = YAML.load_file(CONFIG_PATH)
+WORKING_DIR = ( cfg['working_dir'] && Dir.exists?(cfg['working_dir']) ? cfg['working_dir'] : Dir.pwd )
 
 CONSUMER_KEY = cfg['500px']['key']
 PHOTOS_PER_PAGE = cfg['500px']['photos_per_page']

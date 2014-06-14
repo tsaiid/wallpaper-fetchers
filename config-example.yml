@@ -1,3 +1,5 @@
+working_dir: SET_OR_DEFAULT_IS_CURRENT_DIR
+
 500px:
   key: PLEASE_USE_YOUR_KEY
   photos_per_page:  20
