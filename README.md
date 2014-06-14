@@ -1,27 +1,23 @@
-wallpaper-fetchers
+Wallpaper Fetchers
 ==================
 
-## Flickr Interestingness
+## Introduction
 
-A python script.
+This project includes two Ruby scripts to fetch Flickr Interestingness and 500px Popular images. The source of flickr interestingness is based on [a RSS feed built with Yahoo Pipes][fi-yp-rss], and the 500px one fetches image using official 500px API, which offers popular images.
 
-Requirement:
+## Requirement
 
-- lxml
-- PyYAML
+A gem `image_size` is required for accessing the fetched image size. You can install it with:
 
-## 500px Popular
+```
+gem install image_size
+```
 
-A Ruby Script.
+## Settings
 
-Requirement:
+1. Copy the `config-example.yml` to `config.yml` for further settings.
+2. You can set a working directory to save the wallpaper images. The default is current directory `'.'`.
+3. Using 500px fetcher, you need a API key. You can register one at [500px / Developer][500px-dev]. Besides, you can set the number of photo getting in `config.yml`. The maximum number is `100`.
 
-- image_size
-
-Configure:
-
-Need a 500px API key. You can have one at [500px / Developer][500px-dev]
-
-You can set the number of photo getting in `config.yml`
-
-[500px-dev]:  http://developers.500px.com/
+[fi-yp-rss]:	http://pipes.yahoo.com/pipes/pipe.info?_id=674e63729ed98e27dd88aadb70b85cf0
+[500px-dev]:	http://developers.500px.com/
