@@ -10,9 +10,8 @@ WORKING_DIR = ( cfg['working_dir'] && Dir.exists?(cfg['working_dir']) ? cfg['wor
 
 CONSUMER_KEY = cfg['500px']['key']
 PHOTOS_PER_PAGE = cfg['500px']['photos_per_page']
-BASE_URL = cfg['default']['500px']['base_url']
 
-POPULAR_URL = BASE_URL + '/v1/photos?' +
+POPULAR_URL = 'https://api.500px.com/v1/photos?' +
               'consumer_key=' + CONSUMER_KEY + '&' +
               'feature=popular' + '&' +
               'image_size=4' + '&' +
