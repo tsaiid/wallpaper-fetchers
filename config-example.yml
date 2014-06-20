@@ -4,6 +4,9 @@ working_dir: SET_OR_DEFAULT_IS_CURRENT_DIR
   key: PLEASE_USE_YOUR_KEY
   photos_per_page:  20
 
+flickr:
+  key: PLEASE_USE_YOUR_KEY
+
 default:
   flickr:
     rss:
