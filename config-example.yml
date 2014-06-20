@@ -7,10 +7,4 @@ working_dir: SET_OR_DEFAULT_IS_CURRENT_DIR
 flickr:
   key: PLEASE_USE_YOUR_KEY
 
-default:
-  flickr:
-    rss:
-      url:  http://feeds.feedburner.com/LargeFlickrInterestingnessFeedForWallpaper
-  500px:
-    base_url: https://api.500px.com
 
