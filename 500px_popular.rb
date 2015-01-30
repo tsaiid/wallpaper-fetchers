@@ -14,7 +14,7 @@ PHOTOS_PER_PAGE = cfg['500px']['photos_per_page']
 POPULAR_URL = 'https://api.500px.com/v1/photos?' +
               'consumer_key=' + CONSUMER_KEY + '&' +
               'feature=popular' + '&' +
-              'image_size=4' + '&' +
+              'image_size=3' + '&' +
               'sort=created_at' + '&' +
               'rpp=' + PHOTOS_PER_PAGE.to_s
 
@@ -26,8 +26,8 @@ end
 
 # read RSS and fetch images
 JSON.load(open(POPULAR_URL))['photos'].each do |photo|
-  image_url = photo['image_url'].gsub(/4\.jpg/, '2048.jpg')
-  filename = WORKING_DIR + '/' + photo['image_url'].match(/\/([^\/]+)\/4\.jpg/)[1] + '.jpg'
+  image_url = photo['image_url'].gsub(/3\.jpg/, '2048.jpg')
+  filename = WORKING_DIR + '/' + photo['image_url'].match(/\/([^\/]+)\/3\.jpg/)[1] + '.jpg'
 
   # fetch image and write
   image = open(image_url).read
